@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Виртуальная Галерея";
+}
+
+<h1>Виртуальная Галерея Искусства</h1>
+
+<form asp-action="SendMessage" method="post">
+    <label for="message">Введите сообщение:</label>
+    <input type="text" id="message" name="message" required />
+    <button type="submit">Отправить</button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <p>Ответ от сервера: @ViewBag.Response</p>
+}

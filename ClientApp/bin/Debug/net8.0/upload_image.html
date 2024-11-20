@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка изображения</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Загрузка изображения</h1>
+    <form id="uploadForm">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" required><br><br>
+
+        <label for="imageName">Название изображения:</label>
+        <input type="text" id="imageName" required><br><br>
+
+        <label for="imageDescription">Описание изображения:</label>
+        <input type="text" id="imageDescription" required><br><br>
+
+        <label for="imageFile">Выберите изображение:</label>
+        <input type="file" id="imageFile" accept="image/*" required><br><br>
+
+        <button type="button" onclick="uploadImage()">Загрузить</button>
+    </form>
+
+    <a href="/view_images.html">Перейти к просмотру загруженных изображений</a>
+	<script>
+			console.log("Подключение к WebSocket...");
+		const socket = new WebSocket("ws://localhost:8081");
+		document.addEventListener("DOMContentLoaded", () => {
+			const username = sessionStorage.getItem("username");
+			if (username) {
+				document.getElementById("username").value = username;
+				document.getElementById("username").disabled = true; // Блокируем поле
+			} else {
+				alert("Пожалуйста, зарегистрируйтесь.");
+				window.location.href = "register.html"; // Переход на страницу регистрации
+			}
+		});
+	</script>
+
+	<script>
+	function uploadImage() {
+		const username = sessionStorage.getItem("username");
+		const imageName = document.getElementById("imageName").value;
+		const imageDescription = document.getElementById("imageDescription").value;
+		const imageFile = document.getElementById("imageFile").files[0];
+
+		if (!imageFile || !username) {
+			alert("Выберите изображение и введите имя пользователя.");
+			return;
+		}
+		console.log("Подключение к WebSocket...");
+		const socket = new WebSocket("ws://localhost:8081");
+		const reader = new FileReader();
+		reader.onload = function (event) {
+			const imageData = event.target.result.split(",")[1];
+			const data = {
+				Username: username,  // Имя пользователя
+				Name: imageName,
+				Description: imageDescription,
+				Image: imageData
+			};
+
+
+
+			socket.onopen = function () {
+				console.log("WebSocket подключен, отправка данных...");
+				socket.send(JSON.stringify(data)); // Отправляем данные
+			};
+
+			socket.onmessage = function (event) {
+				alert("Сервер ответил: " + event.data);
+				console.log("Ответ от сервера:", event.data);
+				socket.close();
+			};
+
+			socket.onerror = function (error) {
+				console.error("Ошибка WebSocket:", error);
+			};
+		};
+		reader.readAsDataURL(imageFile); // Чтение файла как DataURL
+	}
+	</script>
+
+</body>
+</html>
