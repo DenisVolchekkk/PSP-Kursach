@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои галереи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+    <input id="galleryNameInput" type="text" placeholder="Введите название галереи" />
+    <button onclick="createGallery()">Создать галерею</button>
+</div>
+<ul id="galleriesList">
+    <!-- Список галерей -->
+</ul>
+</body>
+<script>
+    async function loadGalleries() {
+        const username = sessionStorage.getItem("username");
+        if (!username) {
+            alert("Пожалуйста, зарегистрируйтесь.");
+            window.location.href = "register.html";
+            return;
+        }
+
+        try {
+            const response = await fetch("/getgalleries", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ Username: username })
+            });
+
+            if (response.ok) {
+                const galleries = await response.json();
+                const galleriesList = document.getElementById("galleriesList");
+                galleriesList.innerHTML = ""; // Очищаем список
+
+                if (galleries.length === 0) {
+                    galleriesList.innerHTML = "<li>Галерей пока нет.</li>";
+                    return;
+                }
+
+                galleries.forEach((gallery) => {
+                    const li = document.createElement("li");
+
+                    // Информация о галерее
+                    const galleryInfo = document.createElement("span");
+                    galleryInfo.textContent = `${gallery.Name} (${gallery.Images.length || 0} изображений)`;
+                    li.appendChild(galleryInfo);
+
+                    // Кнопка "Редактировать"
+                    const editButton = document.createElement("button");
+                    editButton.textContent = "Редактировать";
+                    editButton.addEventListener("click", () => editGallery(gallery.Id));
+
+                    // Кнопка "Удалить"
+                    const deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Удалить";
+                    deleteButton.addEventListener("click", () => deleteGallery(gallery.Id));
+
+                    // Кнопка "Добавить фото"
+                    const addImageButton = document.createElement("button");
+                    addImageButton.textContent = "Добавить фото";
+                    addImageButton.addEventListener("click", () => navigateToAddImage(gallery.Id));
+					
+                    const viewGallaryButton = document.createElement("button");
+                    viewGallaryButton.textContent = "Просмотр";
+                    viewGallaryButton.addEventListener("click", () => navigateToGallary(gallery.Id));
+                    // Добавляем элементы в li
+                    li.appendChild(editButton);
+                    li.appendChild(deleteButton);
+                    li.appendChild(addImageButton);
+                    li.appendChild(viewGallaryButton);
+                    // Добавляем li в список
+                    galleriesList.appendChild(li);
+                });
+            } else {
+                alert("Ошибка загрузки галерей");
+            }
+        } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Не удалось загрузить галереи.");
+        }
+    }
+
+    async function createGallery() {
+        const username = sessionStorage.getItem("username");
+        const galleryNameInput = document.getElementById("galleryNameInput");
+        const galleryName = galleryNameInput.value.trim();
+
+        if (!username) {
+            alert("Пожалуйста, зарегистрируйтесь.");
+            window.location.href = "register.html";
+            return;
+        }
+
+        if (!galleryName) {
+            alert("Название галереи не может быть пустым.");
+            return;
+        }
+
+        try {
+            const response = await fetch("/creategallery", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ Username: username, GalleryName: galleryName })
+            });
+
+            if (response.ok) {
+                alert("Галерея создана!");
+                galleryNameInput.value = "";
+                loadGalleries(); // Обновляем список галерей
+            } else {
+                alert("Ошибка при создании галереи");
+            }
+        } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Не удалось создать галерею.");
+        }
+    }
+
+    async function createGallery() {
+        const username = sessionStorage.getItem("username");
+        const galleryNameInput = document.getElementById("galleryNameInput");
+        const galleryName = galleryNameInput.value.trim();
+
+        if (!username) {
+            alert("Пожалуйста, зарегистрируйтесь.");
+            window.location.href = "register.html";
+            return;
+        }
+
+        if (!galleryName) {
+            alert("Название галереи не может быть пустым.");
+            return;
+        }
+
+        try {
+            const response = await fetch("/creategallery", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ Username: username, GalleryName: galleryName })
+            });
+
+            if (response.ok) {
+                alert("Галерея успешно создана!");
+                galleryNameInput.value = ""; // Очистка поля ввода
+                loadGalleries(); // Обновляем список галерей
+            } else {
+                alert("Ошибка создания галереи.");
+            }
+        } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Не удалось создать галерею.");
+        }
+    }
+
+    function editGallery(index) {
+        alert(`Редактирование галереи с индексом ${index}`);
+    }
+
+  async function deleteGallery(galleryId) {
+        const username = sessionStorage.getItem("username");
+
+        try {
+            const response = await fetch("/deletegallery", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ Username: username, GalleryId: galleryId })
+            });
+
+            if (response.ok) {
+                alert("Галерея удалена!");
+                loadGalleries(); // Обновляем список галерей
+            } else {
+                alert("Ошибка при удалении галереи");
+            }
+        } catch (error) {
+            console.error("Ошибка:", error);
+            alert("Не удалось удалить галерею.");
+        }
+    }
+async function updateGalleryName(galleryId) {
+    const username = sessionStorage.getItem("username");
+    const galleryNameInput = document.getElementById("galleryNameInput");
+    const newGalleryName = galleryNameInput.value.trim();
+	console.log(newGalleryName)
+    if (!username) {
+        alert("Пожалуйста, зарегистрируйтесь.");
+        window.location.href = "register.html";
+        return;
+    }
+
+    if (!newGalleryName) {
+        alert("Название галереи не может быть пустым.");
+        return;
+    }
+
+    try {
+        const response = await fetch("/editgallery", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ Username: username, GalleryId: galleryId, NewName: newGalleryName })
+        });
+
+        if (response.ok) {
+            alert("Название галереи обновлено!");
+            galleryNameInput.value = ""; // Очистка поля ввода
+            loadGalleries(); // Обновляем список галерей
+        } else {
+            alert("Ошибка при обновлении названия галереи.");
+        }
+    } catch (error) {
+        console.error("Ошибка:", error);
+        alert("Не удалось обновить название галереи.");
+    }
+}
+
+    function navigateToAddImage(index) {
+        window.location.href = `upload_image.html?galleryId=${index}`;
+		sessionStorage.setItem("Gallaryid", index);
+
+    }
+    function navigateToGallary(index) {
+        window.location.href = `view_images.html`;
+		sessionStorage.setItem("Gallaryid", index);
+
+    }
+    loadGalleries();
+</script>
+</html>

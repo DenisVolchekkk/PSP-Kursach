@@ -3,10 +3,64 @@
   "WorkspaceRootPath": "E:\\PSP\\kursach\\ServerApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\servecies\\registerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\imagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\servecies\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\servecies\\viewgalleryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\servecies\\galleriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\imagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\gallery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\imageeditrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\imagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\editgalleryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\deletegalleryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\commentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\creategalleryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\likerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\servecies\\jsonfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\interfaces\\ijsonfilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CF1C4E3-9E7C-411E-826A-A09070C2B2C8}|..\\ClientApp\\ClientApp.csproj|e:\\psp\\kursach\\clientapp\\clientapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -19,49 +73,268 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1191165273:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClientApp.csproj",
-              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\ClientApp.csproj",
-              "RelativeDocumentMoniker": "..\\ClientApp\\ClientApp.csproj",
-              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\ClientApp.csproj",
-              "RelativeToolTip": "..\\ClientApp\\ClientApp.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-09T17:49:17.947Z"
+              "DocumentIndex": 6,
+              "Title": "ImageData.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageData.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\ImageData.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageData.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\ImageData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:38.088Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ImageData.cs",
-              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\ImageData.cs",
-              "RelativeDocumentMoniker": "..\\ClientApp\\ImageData.cs",
-              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\ImageData.cs",
-              "RelativeToolTip": "..\\ClientApp\\ImageData.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA6wAgAAAAAAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\User.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\User.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T17:43:40.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:01:33.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\UserRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\UserRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\UserRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\UserRequest.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:03:52.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GalleriesService.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Servecies\\GalleriesService.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Servecies\\GalleriesService.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Servecies\\GalleriesService.cs",
+              "RelativeToolTip": "..\\ClientApp\\Servecies\\GalleriesService.cs",
+              "ViewState": "AQIAAEkBAAAAAAAAAAAwwPMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:38:34.198Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RegisterService.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Servecies\\RegisterService.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Servecies\\RegisterService.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Servecies\\RegisterService.cs",
+              "RelativeToolTip": "..\\ClientApp\\Servecies\\RegisterService.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T18:14:40.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewGalleryService.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Servecies\\ViewGalleryService.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Servecies\\ViewGalleryService.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Servecies\\ViewGalleryService.cs",
+              "RelativeToolTip": "..\\ClientApp\\Servecies\\ViewGalleryService.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAADwv4sAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:32:36.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gallery.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\Gallery.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\Gallery.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\Gallery.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\Gallery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:39:22.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Program.cs",
               "RelativeDocumentMoniker": "..\\ClientApp\\Program.cs",
               "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Program.cs",
               "RelativeToolTip": "..\\ClientApp\\Program.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAwwJwAAAAJAAAA",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAYwLsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T12:35:17.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T07:10:06.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Servecies\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Servecies\\Class1.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Servecies\\Class1.cs",
+              "RelativeToolTip": "..\\ClientApp\\Servecies\\Class1.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAYBAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:49:34.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ImageEditRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageEditRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\ImageEditRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageEditRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\ImageEditRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T16:42:08.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ImageRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\ImageRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\ImageRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\ImageRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T15:50:50.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EditGalleryRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\EditGalleryRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\EditGalleryRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\EditGalleryRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\EditGalleryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T18:32:52.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DeleteGalleryRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\DeleteGalleryRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\DeleteGalleryRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\DeleteGalleryRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\DeleteGalleryRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:05:42.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CommentRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\CommentRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\CommentRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\CommentRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\CommentRequest.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:42.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateGalleryRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\CreateGalleryRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\CreateGalleryRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\CreateGalleryRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\CreateGalleryRequest.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T16:04:10.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LikeRequest.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\LikeRequest.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\LikeRequest.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\LikeRequest.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\LikeRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:46.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Models\\Comment.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Models\\Comment.cs",
+              "RelativeToolTip": "..\\ClientApp\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:50.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Interfaces\\IBaseService.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Interfaces\\IBaseService.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Interfaces\\IBaseService.cs",
+              "RelativeToolTip": "..\\ClientApp\\Interfaces\\IBaseService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:37:13.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "JsonFileManager.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Servecies\\JsonFileManager.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Servecies\\JsonFileManager.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Servecies\\JsonFileManager.cs",
+              "RelativeToolTip": "..\\ClientApp\\Servecies\\JsonFileManager.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:08:36.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IJsonFileManager.cs",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\Interfaces\\IJsonFileManager.cs",
+              "RelativeDocumentMoniker": "..\\ClientApp\\Interfaces\\IJsonFileManager.cs",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\Interfaces\\IJsonFileManager.cs",
+              "RelativeToolTip": "..\\ClientApp\\Interfaces\\IJsonFileManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:04:50.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ClientApp.csproj",
+              "DocumentMoniker": "E:\\PSP\\kursach\\ClientApp\\ClientApp.csproj",
+              "RelativeDocumentMoniker": "..\\ClientApp\\ClientApp.csproj",
+              "ToolTip": "E:\\PSP\\kursach\\ClientApp\\ClientApp.csproj",
+              "RelativeToolTip": "..\\ClientApp\\ClientApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-09T17:49:17.947Z"
             }
           ]
         }

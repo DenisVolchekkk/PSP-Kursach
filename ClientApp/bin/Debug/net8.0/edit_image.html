@@ -1,0 +1,130 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обновление изображения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Обновление изображения</h1>
+    <form id="updateForm">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" disabled><br><br>
+
+        <label for="imageName">Название изображения:</label>
+        <input type="text" id="imageName" required><br><br>
+
+        <label for="imageDescription">Описание изображения:</label>
+        <input type="text" id="imageDescription" required><br><br>
+
+        <label for="imageFile">Выберите новое изображение (опционально):</label>
+        <input type="file" id="imageFile" accept="image/*"><br><br>
+
+        <button type="button" onclick="updateImage()">Обновить</button>
+        <button type="button" onclick="redirectToGallery()">Просмотр галереи</button>
+    </form>
+
+    <script>
+		document.addEventListener("DOMContentLoaded", async () => {
+			const username = sessionStorage.getItem("username");
+			const galleryId = new URLSearchParams(window.location.search).get("galleryId");
+			const imageId = new URLSearchParams(window.location.search).get("imageId");
+
+			if (username && imageId && galleryId) {
+				document.getElementById("username").value = username;
+
+				try {
+					const response = await fetch(`/getimage`, {
+						method: 'POST',  // Assuming you are sending a POST request
+						body: JSON.stringify({
+							Username: username,
+							GalleryId: parseInt(galleryId),
+							ImageId: parseInt(imageId)
+						}),
+						headers: {
+							'Content-Type': 'application/json'
+						}
+					});
+
+					if (response.ok) {
+						const imageData = await response.json();
+						document.getElementById("imageName").value = imageData.Name;
+						document.getElementById("imageDescription").value = imageData.Description;
+					} else {
+						alert("Не удалось загрузить данные изображения.");
+						console.error(await response.text());
+					}
+				} catch (error) {
+					console.error("Ошибка получения данных изображения:", error);
+					alert("Произошла ошибка при загрузке данных изображения.");
+				}
+			} else {
+				alert("Недостаточно данных для редактирования изображения.");
+				window.location.href = "view_images.html";
+			}
+		});
+	
+
+        function redirectToGallery() {
+            window.location.href = "view_images.html";
+        }
+
+        async function updateImage() {
+            const username = sessionStorage.getItem("username");
+            const galleryId = new URLSearchParams(window.location.search).get("galleryId");
+            const imageId = new URLSearchParams(window.location.search).get("imageId");
+            const imageName = document.getElementById("imageName").value;
+            const imageDescription = document.getElementById("imageDescription").value;
+            const imageFile = document.getElementById("imageFile").files[0];
+
+            if (!username || !galleryId || !imageId) {
+                alert("Недостаточно данных для обновления изображения.");
+                return;
+            }
+
+            const data = {
+                Username: username,
+                GalleryId: galleryId,
+                ImageId: imageId,
+                Name: imageName,
+                Description: imageDescription
+            };
+
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onload = async function (event) {
+                    data.Image = event.target.result.split(",")[1];
+                    await sendUpdateRequest(data);
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                await sendUpdateRequest(data);
+            }
+        }
+
+        async function sendUpdateRequest(data) {
+            try {
+                const response = await fetch(`/updateimage`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    alert("Изображение успешно обновлено!");
+                    redirectToGallery();
+                } else {
+                    const errorText = await response.text();
+                    alert("Ошибка обновления: " + errorText);
+                }
+            } catch (error) {
+                console.error("Ошибка отправки данных:", error);
+                alert("Произошла ошибка при обновлении изображения.");
+            }
+        }
+    </script>
+</body>
+</html>

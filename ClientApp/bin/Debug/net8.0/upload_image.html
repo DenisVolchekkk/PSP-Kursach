@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Загрузка изображения</title>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Загрузка изображения</h1>
@@ -21,67 +21,69 @@
         <input type="file" id="imageFile" accept="image/*" required><br><br>
 
         <button type="button" onclick="uploadImage()">Загрузить</button>
+		<button type="button" onclick="redirectToGallery()">Просмотр галлереи</button>
     </form>
 
-    <a href="/view_images.html">Перейти к просмотру загруженных изображений</a>
-	<script>
-			console.log("Подключение к WebSocket...");
-		const socket = new WebSocket("ws://localhost:8081");
-		document.addEventListener("DOMContentLoaded", () => {
-			const username = sessionStorage.getItem("username");
-			if (username) {
-				document.getElementById("username").value = username;
-				document.getElementById("username").disabled = true; // Блокируем поле
-			} else {
-				alert("Пожалуйста, зарегистрируйтесь.");
-				window.location.href = "register.html"; // Переход на страницу регистрации
-			}
-		});
-	</script>
-
-	<script>
-	function uploadImage() {
-		const username = sessionStorage.getItem("username");
-		const imageName = document.getElementById("imageName").value;
-		const imageDescription = document.getElementById("imageDescription").value;
-		const imageFile = document.getElementById("imageFile").files[0];
-
-		if (!imageFile || !username) {
-			alert("Выберите изображение и введите имя пользователя.");
-			return;
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = sessionStorage.getItem("username");
+            if (username) {
+                document.getElementById("username").value = username;
+                document.getElementById("username").disabled = true; // Блокируем поле
+            } else {
+                alert("Пожалуйста, зарегистрируйтесь.");
+                window.location.href = "register.html"; // Переход на страницу регистрации
+            }
+        });
+		function redirectToGallery() {
+			window.location.href = "view_images.html";
 		}
-		console.log("Подключение к WebSocket...");
-		const socket = new WebSocket("ws://localhost:8081");
-		const reader = new FileReader();
-		reader.onload = function (event) {
-			const imageData = event.target.result.split(",")[1];
-			const data = {
-				Username: username,  // Имя пользователя
-				Name: imageName,
-				Description: imageDescription,
-				Image: imageData
-			};
+        async function uploadImage() {
+            const username = sessionStorage.getItem("username");
+			const galleryId = sessionStorage.getItem("Gallaryid"); 
+			const imageName = document.getElementById("imageName").value;
+            const imageDescription = document.getElementById("imageDescription").value;
+            const imageFile = document.getElementById("imageFile").files[0];
 
+            if (!imageFile || !username) {
+                alert("Выберите изображение и введите имя пользователя.");
+                return;
+            }
 
+            const reader = new FileReader();
+            reader.onload = async function (event) {
+                const imageData = event.target.result.split(",")[1];
+                const data = {
+                    Username: username, // Имя пользователя
+					GalleryId: galleryId,
+                    Name: imageName,
+                    Description: imageDescription,
+                    Image: imageData
+                };
 
-			socket.onopen = function () {
-				console.log("WebSocket подключен, отправка данных...");
-				socket.send(JSON.stringify(data)); // Отправляем данные
-			};
+                try {
+                    const response = await fetch("/addimage", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    });
 
-			socket.onmessage = function (event) {
-				alert("Сервер ответил: " + event.data);
-				console.log("Ответ от сервера:", event.data);
-				socket.close();
-			};
+                    if (response.ok) {
+                        alert("Изображение успешно загружено!");
+                    } else {
+                        const errorText = await response.text();
+                        alert("Ошибка загрузки: " + errorText);
+                    }
+                } catch (error) {
+                    console.error("Ошибка отправки данных:", error);
+                    alert("Не удалось загрузить изображение.");
+                }
+            };
 
-			socket.onerror = function (error) {
-				console.error("Ошибка WebSocket:", error);
-			};
-		};
-		reader.readAsDataURL(imageFile); // Чтение файла как DataURL
-	}
-	</script>
-
+            reader.readAsDataURL(imageFile); // Чтение файла как DataURL
+        }
+    </script>
 </body>
 </html>

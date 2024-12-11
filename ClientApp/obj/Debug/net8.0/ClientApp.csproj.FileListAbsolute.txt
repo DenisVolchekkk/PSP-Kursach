@@ -18,3 +18,4 @@ E:\PSP\kursach\ClientApp\obj\Debug\net8.0\ClientApp.csproj.Up2Date
 E:\PSP\kursach\ClientApp\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 E:\PSP\kursach\ClientApp\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
 E:\PSP\kursach\ClientApp\bin\Debug\net8.0\System.IO.Pipelines.dll
+E:\PSP\kursach\ClientApp\obj\Debug\net8.0\ClientApp.sourcelink.json

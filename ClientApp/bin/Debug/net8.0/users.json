@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "Username": "alex",
+    "PasswordHash": "KXP/Stoy3lotN0apJCBJ9BEKanGG6xf/H4JHRU6m2jc=",
+    "Galleries": [
+      {
+        "Id": 1,
+        "Name": "Гал",
+        "Images": []
+      },
+      {
+        "Id": 2,
+        "Name": "Гал2",
+        "Images": []
+      }
+    ],
+    "InvitedUsers": [],
+    "Invitations": []
+  },
+  {
+    "Id": 3,
+    "Username": "den",
+    "PasswordHash": "KXP/Stoy3lotN0apJCBJ9BEKanGG6xf/H4JHRU6m2jc=",
+    "Galleries": [],
+    "InvitedUsers": [],
+    "Invitations": []
+  }
+]
